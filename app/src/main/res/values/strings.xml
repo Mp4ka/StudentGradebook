@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Успеваемость</string>
+    <string name="main_title">Успеваемость</string>
+    <string name="main_subtitle">Личный кабинет студента</string>
+    <string name="sprint_badge">СПРИНТ 1 · КАРКАС ПРОЕКТА</string>
+
+    <string name="average_label">СРЕДНИЙ БАЛЛ</string>
+    <string name="average_value">—</string>
+    <string name="average_empty_title">Оценок пока нет</string>
+    <string name="average_empty_body">Добавьте первую оценку — средний балл появится на этом экране.</string>
+
+    <string name="section_screens">Разделы</string>
+
+    <string name="menu_disciplines">Дисциплины</string>
+    <string name="menu_disciplines_hint">Предметы и средний балл по каждому</string>
+    <string name="menu_dynamics">Динамика</string>
+    <string name="menu_dynamics_hint">Изменение среднего балла по периодам</string>
+    <string name="menu_target">Целевой балл</string>
+    <string name="menu_target_hint">Какая оценка нужна, чтобы выйти на цель</string>
+
+    <string name="footer">Каркас проекта · версия 0.1.0 · спринт 1 из 6</string>
+    <string name="soon_template">Раздел «%1$s» появится в спринте 3</string>
+</resources>
