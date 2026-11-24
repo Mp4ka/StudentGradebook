@@ -3,7 +3,7 @@
     <string name="app_name">Успеваемость</string>
     <string name="main_title">Успеваемость</string>
     <string name="main_subtitle">Личный кабинет студента</string>
-    <string name="sprint_badge">СПРИНТ 1 · КАРКАС ПРОЕКТА</string>
+    <string name="sprint_badge">СПРИНТ 2 · ЛОКАЛЬНОЕ ХРАНЕНИЕ</string>
 
     <string name="average_label">СРЕДНИЙ БАЛЛ</string>
     <string name="average_value">—</string>
@@ -19,6 +19,20 @@
     <string name="menu_target">Целевой балл</string>
     <string name="menu_target_hint">Какая оценка нужна, чтобы выйти на цель</string>
 
-    <string name="footer">Каркас проекта · версия 0.1.0 · спринт 1 из 6</string>
+    <string name="footer">Версия 0.2.0 · спринт 2 из 6 · данные Room/SQLite</string>
     <string name="soon_template">Раздел «%1$s» появится в спринте 3</string>
+
+    <plurals name="grades_count">
+        <item quantity="one">%d оценка</item>
+        <item quantity="few">%d оценки</item>
+        <item quantity="many">%d оценок</item>
+        <item quantity="other">%d оценок</item>
+    </plurals>
+
+    <plurals name="disciplines_count">
+        <item quantity="one">%d дисциплина</item>
+        <item quantity="few">%d дисциплины</item>
+        <item quantity="many">%d дисциплин</item>
+        <item quantity="other">%d дисциплин</item>
+    </plurals>
 </resources>
