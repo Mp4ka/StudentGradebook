@@ -15,4 +15,16 @@
 
     <color name="badge_background">#ECEAFE</color>
     <color name="badge_text">#3B32B8</color>
+
+    <color name="risk_ink">#B45309</color>
+    <color name="risk_bg">#FDF1DE</color>
+
+    <color name="grade_5_ink">#0F9D76</color>
+    <color name="grade_5_bg">#E4F6EF</color>
+    <color name="grade_4_ink">#4F46E5</color>
+    <color name="grade_4_bg">#ECEAFE</color>
+    <color name="grade_3_ink">#B45309</color>
+    <color name="grade_3_bg">#FDF1DE</color>
+    <color name="grade_2_ink">#C0392B</color>
+    <color name="grade_2_bg">#FBE9E7</color>
 </resources>

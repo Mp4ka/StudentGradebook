@@ -1,14 +1,17 @@
 package ru.college.gradebook.data
 
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import ru.college.gradebook.data.db.GradeEntity
 import ru.college.gradebook.data.db.GradebookDatabase
 import ru.college.gradebook.data.db.DisciplineEntity
 import ru.college.gradebook.data.db.DemoData
 import ru.college.gradebook.data.model.Discipline
+import ru.college.gradebook.data.model.DisciplineSummary
 import ru.college.gradebook.data.model.Grade
 import ru.college.gradebook.data.model.WorkType
+import ru.college.gradebook.domain.GradeMath
 import java.time.LocalDate
 
 /**
@@ -28,6 +31,25 @@ class GradebookRepository(private val database: GradebookDatabase) {
 
     fun observeGrades(disciplineId: Long): Flow<List<Grade>> =
         gradeDao.observeByDiscipline(disciplineId).map { rows -> rows.map { it.toDomain() } }
+
+    /** Список дисциплин со средним баллом и количеством оценок. */
+    fun observeDisciplineSummaries(): Flow<List<DisciplineSummary>> =
+        combine(observeDisciplines(), observeAllGrades()) { disciplines, grades ->
+            val byDiscipline = grades.groupBy { it.disciplineId }
+            disciplines.map { discipline ->
+                val values = byDiscipline[discipline.id].orEmpty().map { it.value }
+                DisciplineSummary(
+                    discipline = discipline,
+                    gradeCount = values.size,
+                    average = GradeMath.average(values)
+                )
+            }
+        }
+
+    suspend fun getGrade(gradeId: Long): Grade? = gradeDao.findById(gradeId)?.toDomain()
+
+    suspend fun getDiscipline(disciplineId: Long): Discipline? =
+        disciplineDao.findById(disciplineId)?.toDomain()
 
     suspend fun disciplineCount(): Int = disciplineDao.count()
 

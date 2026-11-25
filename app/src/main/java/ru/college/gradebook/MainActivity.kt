@@ -1,5 +1,6 @@
 package ru.college.gradebook
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -13,11 +14,12 @@ import kotlinx.coroutines.launch
 import ru.college.gradebook.data.model.Discipline
 import ru.college.gradebook.data.model.Grade
 import ru.college.gradebook.domain.GradeMath
+import ru.college.gradebook.ui.applySystemBarInsets
+import ru.college.gradebook.ui.disciplines.DisciplinesActivity
 
 /**
- * Главный экран. На втором спринте он показывает реальные данные из Room:
- * общий средний балл и количество записей. Навигация по разделам появится
- * в спринте 3, поэтому пункты показывают пояснение.
+ * Главный экран: средний балл и количество записей из Room, вход в список дисциплин.
+ * Разделы «Динамика» и «Целевой балл» появятся в следующих спринтах.
  */
 class MainActivity : AppCompatActivity() {
 
@@ -31,13 +33,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        findViewById<View>(android.R.id.content).applySystemBarInsets()
 
         averageView = findViewById(R.id.tv_average)
         statsView = findViewById(R.id.tv_stats)
         emptyTitleView = findViewById(R.id.tv_empty_title)
         emptyBodyView = findViewById(R.id.tv_empty_body)
 
-        bindSection(R.id.card_disciplines, getString(R.string.menu_disciplines))
+        findViewById<View>(R.id.card_disciplines).setOnClickListener {
+            startActivity(Intent(this, DisciplinesActivity::class.java))
+        }
         bindSection(R.id.card_dynamics, getString(R.string.menu_dynamics))
         bindSection(R.id.card_target, getString(R.string.menu_target))
 

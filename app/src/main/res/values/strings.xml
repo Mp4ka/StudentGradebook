@@ -3,7 +3,7 @@
     <string name="app_name">Успеваемость</string>
     <string name="main_title">Успеваемость</string>
     <string name="main_subtitle">Личный кабинет студента</string>
-    <string name="sprint_badge">СПРИНТ 2 · ЛОКАЛЬНОЕ ХРАНЕНИЕ</string>
+    <string name="sprint_badge">СПРИНТ 3 · ЭКРАНЫ И ЖУРНАЛ</string>
 
     <string name="average_label">СРЕДНИЙ БАЛЛ</string>
     <string name="average_value">—</string>
@@ -19,8 +19,8 @@
     <string name="menu_target">Целевой балл</string>
     <string name="menu_target_hint">Какая оценка нужна, чтобы выйти на цель</string>
 
-    <string name="footer">Версия 0.2.0 · спринт 2 из 6 · данные Room/SQLite</string>
-    <string name="soon_template">Раздел «%1$s» появится в спринте 3</string>
+    <string name="footer">Версия 0.3.0 · спринт 3 из 6 · данные Room/SQLite</string>
+    <string name="soon_template">Раздел «%1$s» появится в следующем спринте</string>
 
     <plurals name="grades_count">
         <item quantity="one">%d оценка</item>
@@ -35,4 +35,44 @@
         <item quantity="many">%d дисциплин</item>
         <item quantity="other">%d дисциплин</item>
     </plurals>
+
+    <!-- Экран дисциплин -->
+    <string name="title_disciplines">Дисциплины</string>
+    <string name="disciplines_subtitle">Средний балл считается по всем оценкам предмета</string>
+    <string name="empty_disciplines_title">Дисциплин пока нет</string>
+    <string name="empty_disciplines_body">Добавьте предмет, чтобы начать вести оценки.</string>
+    <string name="risk_label">риск</string>
+    <string name="teacher_unknown">преподаватель не указан</string>
+
+    <!-- Журнал -->
+    <string name="empty_grades_title">Оценок пока нет</string>
+    <string name="empty_grades_body">Добавьте первую оценку — средний балл и журнал появятся сразу.</string>
+    <string name="action_add_grade">Добавить оценку</string>
+    <string name="action_more">Действия с записью</string>
+    <string name="grade_no_comment">без комментария</string>
+
+    <!-- Форма оценки -->
+    <string name="title_new_grade">Новая оценка</string>
+    <string name="title_edit_grade">Редактирование оценки</string>
+    <string name="label_discipline">ДИСЦИПЛИНА</string>
+    <string name="label_grade">ОЦЕНКА</string>
+    <string name="label_date">ДАТА</string>
+    <string name="label_work_type">ВИД РАБОТЫ</string>
+    <string name="label_comment">КОММЕНТАРИЙ</string>
+    <string name="hint_comment">Например: нормализация, приведение к 3НФ</string>
+    <string name="work_control">Контрольная</string>
+    <string name="work_practice">Практическая</string>
+    <string name="work_lab">Лабораторная</string>
+    <string name="work_answer">Устный ответ</string>
+    <string name="work_test">Тест</string>
+    <string name="work_other">Другое</string>
+
+    <!-- Действия -->
+    <string name="action_save">Сохранить</string>
+    <string name="saving">Сохранение…</string>
+    <string name="action_edit">Изменить</string>
+    <string name="action_delete">Удалить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete_grade_title">Удалить оценку?</string>
+    <string name="delete_grade_message">Запись «%1$s» будет удалена, средний балл пересчитается.</string>
 </resources>

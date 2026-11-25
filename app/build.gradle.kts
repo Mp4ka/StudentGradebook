@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("com.android.application")
     id("com.google.devtools.ksp")
 }
@@ -13,8 +13,8 @@ android {
         applicationId = "ru.college.gradebook"
         minSdk = 26
         targetSdk = 37
-        versionCode = 2
-        versionName = "0.2.0-sprint2"
+        versionCode = 3
+        versionName = "0.3.0-sprint3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -34,7 +34,7 @@ android {
     }
 
     buildFeatures {
-        viewBinding = false
+        viewBinding = true
     }
 
     testOptions {
@@ -52,6 +52,7 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
