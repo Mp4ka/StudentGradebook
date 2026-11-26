@@ -16,6 +16,7 @@ import ru.college.gradebook.data.model.Grade
 import ru.college.gradebook.domain.GradeMath
 import ru.college.gradebook.ui.applySystemBarInsets
 import ru.college.gradebook.ui.disciplines.DisciplinesActivity
+import ru.college.gradebook.ui.dynamics.DynamicsActivity
 
 /**
  * Главный экран: средний балл и количество записей из Room, вход в список дисциплин.
@@ -43,7 +44,9 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.card_disciplines).setOnClickListener {
             startActivity(Intent(this, DisciplinesActivity::class.java))
         }
-        bindSection(R.id.card_dynamics, getString(R.string.menu_dynamics))
+        findViewById<View>(R.id.card_dynamics).setOnClickListener {
+            startActivity(Intent(this, DynamicsActivity::class.java))
+        }
         bindSection(R.id.card_target, getString(R.string.menu_target))
 
         observeData()

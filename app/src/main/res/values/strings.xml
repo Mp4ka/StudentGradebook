@@ -3,7 +3,7 @@
     <string name="app_name">Успеваемость</string>
     <string name="main_title">Успеваемость</string>
     <string name="main_subtitle">Личный кабинет студента</string>
-    <string name="sprint_badge">СПРИНТ 3 · ЭКРАНЫ И ЖУРНАЛ</string>
+    <string name="sprint_badge">СПРИНТ 4 · АНАЛИТИКА</string>
 
     <string name="average_label">СРЕДНИЙ БАЛЛ</string>
     <string name="average_value">—</string>
@@ -19,7 +19,7 @@
     <string name="menu_target">Целевой балл</string>
     <string name="menu_target_hint">Какая оценка нужна, чтобы выйти на цель</string>
 
-    <string name="footer">Версия 0.3.0 · спринт 3 из 6 · данные Room/SQLite</string>
+    <string name="footer">Версия 0.4.0 · спринт 4 из 6 · данные Room/SQLite</string>
     <string name="soon_template">Раздел «%1$s» появится в следующем спринте</string>
 
     <plurals name="grades_count">
@@ -66,6 +66,11 @@
     <string name="work_answer">Устный ответ</string>
     <string name="work_test">Тест</string>
     <string name="work_other">Другое</string>
+    <string name="work_control_short">КР</string>
+    <string name="work_practice_short">ПР</string>
+    <string name="work_lab_short">ЛР</string>
+    <string name="work_answer_short">ОТВ</string>
+    <string name="work_test_short">ТЕСТ</string>
 
     <!-- Действия -->
     <string name="action_save">Сохранить</string>
@@ -75,4 +80,23 @@
     <string name="cancel">Отмена</string>
     <string name="delete_grade_title">Удалить оценку?</string>
     <string name="delete_grade_message">Запись «%1$s» будет удалена, средний балл пересчитается.</string>
+
+    <!-- Спринт 4: фильтры и аналитика -->
+    <string name="title_dynamics">Динамика</string>
+    <string name="all_disciplines">Все дисциплины</string>
+    <string name="average_by_records">среднее арифметическое по записям, без весов</string>
+    <string name="monthly_average">СРЕДНИЙ БАЛЛ ПО МЕСЯЦАМ</string>
+    <string name="dynamics_summary">Лучший месяц — %1$s (%2$s), просадка — %3$s (%4$s)</string>
+    <string name="empty_dynamics">Пока нет оценок для выбранной дисциплины</string>
+
+    <string name="filter_all">Все</string>
+    <string name="filter_period">Период</string>
+    <string name="filter_sort">Сортировка</string>
+    <string name="filter_reset">Сбросить</string>
+    <string name="filtered_line">По фильтру: %1$s · %2$s</string>
+    <string name="empty_filtered_title">По фильтру ничего нет</string>
+    <string name="empty_filtered_body">Измените период или вид работы — или сбросьте фильтр.</string>
+    <string name="period_pick">Выберите период</string>
+    <string name="action_reset_filter">Сбросить фильтр</string>
 </resources>
+

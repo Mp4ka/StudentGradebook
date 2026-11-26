@@ -30,6 +30,10 @@
             android:name=".ui.edit.GradeEditActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.dynamics.DynamicsActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
