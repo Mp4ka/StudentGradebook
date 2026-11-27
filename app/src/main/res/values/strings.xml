@@ -3,7 +3,7 @@
     <string name="app_name">Успеваемость</string>
     <string name="main_title">Успеваемость</string>
     <string name="main_subtitle">Личный кабинет студента</string>
-    <string name="sprint_badge">СПРИНТ 4 · АНАЛИТИКА</string>
+    <string name="sprint_badge">СПРИНТ 5 · ЦЕЛЕВОЙ БАЛЛ</string>
 
     <string name="average_label">СРЕДНИЙ БАЛЛ</string>
     <string name="average_value">—</string>
@@ -19,7 +19,7 @@
     <string name="menu_target">Целевой балл</string>
     <string name="menu_target_hint">Какая оценка нужна, чтобы выйти на цель</string>
 
-    <string name="footer">Версия 0.4.0 · спринт 4 из 6 · данные Room/SQLite</string>
+    <string name="footer">Версия 0.5.0 · спринт 5 из 6 · данные Room/SQLite</string>
     <string name="soon_template">Раздел «%1$s» появится в следующем спринте</string>
 
     <plurals name="grades_count">
@@ -98,5 +98,20 @@
     <string name="empty_filtered_body">Измените период или вид работы — или сбросьте фильтр.</string>
     <string name="period_pick">Выберите период</string>
     <string name="action_reset_filter">Сбросить фильтр</string>
+
+    <!-- Спринт 5: целевой балл -->
+    <string name="title_target">Целевой балл</string>
+    <string name="target_label">ЦЕЛЕВОЙ БАЛЛ</string>
+    <string name="target_min">2,0</string>
+    <string name="target_max">5,0</string>
+    <string name="target_needed_title">Нужна оценка за следующую работу</string>
+    <string name="target_needed_note">Чтобы выйти на %1$s, за следующую работу нужна эта оценка.</string>
+    <string name="target_unreachable_title">Цель недостижима одной оценкой</string>
+    <string name="target_unreachable_note">Даже оценка 5 не даст такой средний — выше показан максимум, который можно получить.</string>
+    <string name="target_achieved_title">Цель уже достигнута</string>
+    <string name="target_achieved_note">Любая следующая оценка сохранит средний не ниже цели.</string>
+    <string name="target_no_data_title">Оценок пока нет</string>
+    <string name="target_no_data_note">Добавьте оценки — калькулятор посчитает нужную оценку.</string>
 </resources>
+
 

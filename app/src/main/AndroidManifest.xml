@@ -34,6 +34,10 @@
         <activity
             android:name=".ui.dynamics.DynamicsActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ui.target.TargetActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
