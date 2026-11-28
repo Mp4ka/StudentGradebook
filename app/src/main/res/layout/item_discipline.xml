@@ -51,6 +51,15 @@
                 android:layout_marginTop="6dp"
                 android:textColor="@color/ink_muted"
                 android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/risk_ink"
+                android:textSize="12sp"
+                android:visibility="gone" />
         </LinearLayout>
 
         <LinearLayout

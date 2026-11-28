@@ -1,12 +1,14 @@
 package ru.college.gradebook.ui.disciplines
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.college.gradebook.R
 import ru.college.gradebook.databinding.ItemDisciplineBinding
+import ru.college.gradebook.domain.RiskReason
 
 class DisciplineAdapter(
     private val onClick: (DisciplineUi) -> Unit
@@ -34,6 +36,7 @@ class DisciplineAdapter(
                 R.plurals.grades_count, item.gradeCount, item.gradeCount
             )
             binding.average.text = item.averageText
+
             val average = item.averageValue
             binding.average.setBackgroundResource(
                 when {
@@ -52,11 +55,22 @@ class DisciplineAdapter(
                     }
                 )
             )
-            binding.riskChip.visibility = if (item.isRisk) {
-                android.view.View.VISIBLE
-            } else {
-                android.view.View.GONE
+
+            binding.riskChip.visibility = if (item.isRisk) View.VISIBLE else View.GONE
+            binding.reason.visibility = if (item.reasons.isEmpty()) View.GONE else View.VISIBLE
+            binding.reason.text = item.reasons.joinToString(" · ") { reason ->
+                when (reason) {
+                    RiskReason.NO_GRADES -> context.getString(R.string.risk_no_grades)
+                    RiskReason.LOW_AVERAGE -> context.getString(
+                        R.string.risk_low_average, item.averageText, item.thresholdText
+                    )
+                    RiskReason.FEW_GRADES -> context.getString(
+                        R.string.risk_few_grades, item.gradeCount
+                    )
+                    RiskReason.NO_RECENT_GRADES -> context.getString(R.string.risk_no_recent, 30)
+                }
             }
+
             binding.root.setOnClickListener { onClick(item) }
         }
     }

@@ -6,6 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import ru.college.gradebook.data.GradebookRepository
+import ru.college.gradebook.data.SettingsStore
 import ru.college.gradebook.data.db.GradebookDatabase
 
 /**
@@ -17,6 +18,8 @@ class GradebookApp : Application() {
     val database: GradebookDatabase by lazy { GradebookDatabase.get(this) }
 
     val repository: GradebookRepository by lazy { GradebookRepository(database) }
+
+    val settings: SettingsStore by lazy { SettingsStore(this) }
 
     private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 

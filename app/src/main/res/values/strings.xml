@@ -3,7 +3,7 @@
     <string name="app_name">Успеваемость</string>
     <string name="main_title">Успеваемость</string>
     <string name="main_subtitle">Личный кабинет студента</string>
-    <string name="sprint_badge">СПРИНТ 5 · ЦЕЛЕВОЙ БАЛЛ</string>
+    <string name="sprint_badge">СПРИНТ 6 · ФИНАЛЬНАЯ ВЕРСИЯ</string>
 
     <string name="average_label">СРЕДНИЙ БАЛЛ</string>
     <string name="average_value">—</string>
@@ -19,7 +19,7 @@
     <string name="menu_target">Целевой балл</string>
     <string name="menu_target_hint">Какая оценка нужна, чтобы выйти на цель</string>
 
-    <string name="footer">Версия 0.5.0 · спринт 5 из 6 · данные Room/SQLite</string>
+    <string name="footer">Версия 1.0.0 · финальная сборка · данные Room/SQLite</string>
     <string name="soon_template">Раздел «%1$s» появится в следующем спринте</string>
 
     <plurals name="grades_count">
@@ -112,6 +112,18 @@
     <string name="target_achieved_note">Любая следующая оценка сохранит средний не ниже цели.</string>
     <string name="target_no_data_title">Оценок пока нет</string>
     <string name="target_no_data_note">Добавьте оценки — калькулятор посчитает нужную оценку.</string>
+
+    <!-- Спринт 6: индикатор риска -->
+    <string name="risk_threshold_menu">Порог риска</string>
+    <string name="risk_threshold_dialog_title">Порог риска</string>
+    <string name="risk_threshold_dialog_body">Дисциплины со средним баллом ниже порога подсвечиваются как проблемные.</string>
+    <string name="risk_no_grades">нет ни одной оценки</string>
+    <string name="risk_low_average">средний %1$s ниже порога %2$s</string>
+    <string name="risk_few_grades">мало оценок: %1$d</string>
+    <string name="risk_no_recent">нет оценок за %1$d дней</string>
+    <string name="save">Сохранить</string>
+    <string name="risk_summary">%1$d из %2$d требуют внимания</string>
 </resources>
+
 
 

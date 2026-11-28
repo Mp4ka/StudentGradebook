@@ -7,7 +7,8 @@ package ru.college.gradebook.data.model
 data class DisciplineSummary(
     val discipline: Discipline,
     val gradeCount: Int,
-    val average: Double?
+    val average: Double?,
+    val lastGradeDate: java.time.LocalDate? = null
 ) {
     /** Дисциплина требует внимания, если средний балл ниже порога. */
     val isRisk: Boolean get() = average != null && average < RISK_THRESHOLD

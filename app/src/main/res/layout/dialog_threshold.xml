@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/risk_threshold_dialog_body"
+        android:textColor="@color/ink_secondary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/thresholdValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/brand_primary"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/thresholdSeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:max="30" />
+</LinearLayout>

@@ -41,7 +41,8 @@ class GradebookRepository(private val database: GradebookDatabase) {
                 DisciplineSummary(
                     discipline = discipline,
                     gradeCount = values.size,
-                    average = GradeMath.average(values)
+                    average = GradeMath.average(values),
+                    lastGradeDate = byDiscipline[discipline.id].orEmpty().maxOfOrNull { it.date }
                 )
             }
         }
