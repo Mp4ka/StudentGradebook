@@ -15,7 +15,6 @@ android {
         targetSdk = 37
         versionCode = 6
         versionName = "1.0.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -37,9 +36,6 @@ android {
         viewBinding = true
     }
 
-    testOptions {
-        unitTests.isIncludeAndroidResources = true
-    }
 }
 
 // Room экспортирует схему базы в JSON: это основа будущих миграций и ревью модели.
@@ -59,11 +55,4 @@ dependencies {
     implementation("androidx.room:room-runtime:2.8.5")
     implementation("androidx.room:room-ktx:2.8.5")
     ksp("androidx.room:room-compiler:2.8.5")
-
-    testImplementation("junit:junit:4.13.2")
-
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test:runner:1.5.2")
-    androidTestImplementation("androidx.test:core:1.5.0")
-    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
 }
